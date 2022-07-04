@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.pboxLeave = new System.Windows.Forms.PictureBox();
             this.pboxMin = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tboxUsuario = new System.Windows.Forms.TextBox();
@@ -44,10 +44,12 @@
             this.linklblOlvido = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // pboxLeave
@@ -56,7 +58,7 @@
             this.pboxLeave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxLeave.BackgroundImage")));
             this.pboxLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pboxLeave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxLeave.Location = new System.Drawing.Point(765, 5);
+            this.pboxLeave.Location = new System.Drawing.Point(764, 6);
             this.pboxLeave.Name = "pboxLeave";
             this.pboxLeave.Size = new System.Drawing.Size(30, 25);
             this.pboxLeave.TabIndex = 0;
@@ -71,7 +73,7 @@
             this.pboxMin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxMin.BackgroundImage")));
             this.pboxMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pboxMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxMin.Location = new System.Drawing.Point(735, 5);
+            this.pboxMin.Location = new System.Drawing.Point(734, 6);
             this.pboxMin.Name = "pboxMin";
             this.pboxMin.Size = new System.Drawing.Size(30, 25);
             this.pboxMin.TabIndex = 1;
@@ -83,7 +85,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -91,16 +92,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 390);
             this.panel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(81, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // linkLabel1
             // 
@@ -110,9 +102,10 @@
             this.linkLabel1.Location = new System.Drawing.Point(34, 359);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(122, 16);
-            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Desea registrarse?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox3
             // 
@@ -178,8 +171,9 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.btnIngresar.BackColor = System.Drawing.Color.LightGray;
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Location = new System.Drawing.Point(335, 311);
@@ -188,6 +182,8 @@
             this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnIngresar.MouseEnter += new System.EventHandler(this.btnIngresar_MouseEnter);
             // 
             // linklblOlvido
             // 
@@ -196,9 +192,9 @@
             this.linklblOlvido.Location = new System.Drawing.Point(424, 359);
             this.linklblOlvido.Name = "linklblOlvido";
             this.linklblOlvido.Size = new System.Drawing.Size(142, 16);
-            this.linklblOlvido.TabIndex = 10;
-            this.linklblOlvido.TabStop = true;
+            this.linklblOlvido.TabIndex = 5;
             this.linklblOlvido.Text = "¿Olvido su contraseña?";
+            this.linklblOlvido.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblOlvido_LinkClicked);
             // 
             // label4
             // 
@@ -216,13 +212,19 @@
             this.label5.Size = new System.Drawing.Size(350, 1);
             this.label5.TabIndex = 12;
             // 
+            // errorIcono
+            // 
+            this.errorIcono.BlinkRate = 450;
+            this.errorIcono.ContainerControl = this;
+            this.errorIcono.Icon = ((System.Drawing.Icon)(resources.GetObject("errorIcono.Icon")));
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(220)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 390);
+            this.ClientSize = new System.Drawing.Size(799, 390);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linklblOlvido);
@@ -239,15 +241,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogin";
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.Gainsboro;
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,6 +274,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

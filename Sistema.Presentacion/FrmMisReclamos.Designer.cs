@@ -1,0 +1,319 @@
+﻿namespace Sistema.Presentacion
+{
+    partial class FrmMisReclamos
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMisReclamos));
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnFuncionario = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnCuenta = new System.Windows.Forms.Button();
+            this.pboxMin = new System.Windows.Forms.PictureBox();
+            this.pboxLeave = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnLista = new System.Windows.Forms.Button();
+            this.btnNuevoReclamo = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pboxBack = new System.Windows.Forms.PictureBox();
+            this.dgvListado = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(40, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 1);
+            this.label1.TabIndex = 21;
+            // 
+            // lblMail
+            // 
+            this.lblMail.AutoSize = true;
+            this.lblMail.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.Location = new System.Drawing.Point(63, 70);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(88, 14);
+            this.lblMail.TabIndex = 18;
+            this.lblMail.Text = "tito@gmail.com";
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Location = new System.Drawing.Point(63, 86);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(43, 16);
+            this.lblRol.TabIndex = 17;
+            this.lblRol.Text = "Vecino";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AccessibleDescription = "asdsad";
+            this.lblNombre.AccessibleName = "dsfsd";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(63, 52);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(77, 16);
+            this.lblNombre.TabIndex = 16;
+            this.lblNombre.Text = "Tito Martinez";
+            // 
+            // btnFuncionario
+            // 
+            this.btnFuncionario.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnFuncionario.Enabled = false;
+            this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionario.ForeColor = System.Drawing.Color.Black;
+            this.btnFuncionario.Location = new System.Drawing.Point(35, 300);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(132, 29);
+            this.btnFuncionario.TabIndex = 4;
+            this.btnFuncionario.Text = "Funcionarios";
+            this.btnFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // btnCuenta
+            // 
+            this.btnCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCuenta.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCuenta.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuenta.Location = new System.Drawing.Point(35, 176);
+            this.btnCuenta.Name = "btnCuenta";
+            this.btnCuenta.Size = new System.Drawing.Size(132, 29);
+            this.btnCuenta.TabIndex = 1;
+            this.btnCuenta.Text = "Mi cuenta";
+            this.btnCuenta.UseVisualStyleBackColor = true;
+            this.btnCuenta.Click += new System.EventHandler(this.btnCuenta_Click);
+            // 
+            // pboxMin
+            // 
+            this.pboxMin.BackColor = System.Drawing.Color.Transparent;
+            this.pboxMin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxMin.BackgroundImage")));
+            this.pboxMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pboxMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxMin.Location = new System.Drawing.Point(848, 5);
+            this.pboxMin.Name = "pboxMin";
+            this.pboxMin.Size = new System.Drawing.Size(30, 25);
+            this.pboxMin.TabIndex = 22;
+            this.pboxMin.TabStop = false;
+            this.pboxMin.Click += new System.EventHandler(this.pboxMin_Click);
+            this.pboxMin.MouseEnter += new System.EventHandler(this.pboxMin_MouseEnter);
+            this.pboxMin.MouseLeave += new System.EventHandler(this.pboxMin_MouseLeave);
+            // 
+            // pboxLeave
+            // 
+            this.pboxLeave.BackColor = System.Drawing.Color.Transparent;
+            this.pboxLeave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxLeave.BackgroundImage")));
+            this.pboxLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pboxLeave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxLeave.Location = new System.Drawing.Point(878, 5);
+            this.pboxLeave.Name = "pboxLeave";
+            this.pboxLeave.Size = new System.Drawing.Size(30, 25);
+            this.pboxLeave.TabIndex = 21;
+            this.pboxLeave.TabStop = false;
+            this.pboxLeave.Click += new System.EventHandler(this.pboxLeave_Click);
+            this.pboxLeave.MouseEnter += new System.EventHandler(this.pboxLeave_MouseEnter);
+            this.pboxLeave.MouseLeave += new System.EventHandler(this.pboxLeave_MouseLeave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(722, 459);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(186, 52);
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 51);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
+            this.linkLabel1.Location = new System.Drawing.Point(44, 490);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(108, 16);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "¿Necesita ayuda?";
+            // 
+            // btnLista
+            // 
+            this.btnLista.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnLista.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLista.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLista.Location = new System.Drawing.Point(35, 259);
+            this.btnLista.Name = "btnLista";
+            this.btnLista.Size = new System.Drawing.Size(132, 29);
+            this.btnLista.TabIndex = 3;
+            this.btnLista.Text = "Mis reclamos";
+            this.btnLista.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevoReclamo
+            // 
+            this.btnNuevoReclamo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevoReclamo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnNuevoReclamo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoReclamo.Location = new System.Drawing.Point(35, 217);
+            this.btnNuevoReclamo.Name = "btnNuevoReclamo";
+            this.btnNuevoReclamo.Size = new System.Drawing.Size(132, 29);
+            this.btnNuevoReclamo.TabIndex = 2;
+            this.btnNuevoReclamo.Text = "Nuevo reclamo";
+            this.btnNuevoReclamo.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.panel1.Controls.Add(this.pboxBack);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblMail);
+            this.panel1.Controls.Add(this.lblRol);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.btnFuncionario);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.btnCuenta);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.btnLista);
+            this.panel1.Controls.Add(this.btnNuevoReclamo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 515);
+            this.panel1.TabIndex = 23;
+            // 
+            // pboxBack
+            // 
+            this.pboxBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxBack.BackgroundImage")));
+            this.pboxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pboxBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxBack.Location = new System.Drawing.Point(174, 5);
+            this.pboxBack.Name = "pboxBack";
+            this.pboxBack.Size = new System.Drawing.Size(21, 20);
+            this.pboxBack.TabIndex = 40;
+            this.pboxBack.TabStop = false;
+            this.pboxBack.Click += new System.EventHandler(this.pboxBack_Click);
+            // 
+            // dgvListado
+            // 
+            this.dgvListado.AllowUserToAddRows = false;
+            this.dgvListado.AllowUserToDeleteRows = false;
+            this.dgvListado.AllowUserToOrderColumns = true;
+            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListado.Location = new System.Drawing.Point(206, 49);
+            this.dgvListado.Name = "dgvListado";
+            this.dgvListado.ReadOnly = true;
+            this.dgvListado.Size = new System.Drawing.Size(692, 381);
+            this.dgvListado.TabIndex = 24;
+            // 
+            // FrmMisReclamos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(220)))));
+            this.ClientSize = new System.Drawing.Size(910, 515);
+            this.Controls.Add(this.dgvListado);
+            this.Controls.Add(this.pboxMin);
+            this.Controls.Add(this.pboxLeave);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmMisReclamos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmMisReclamos";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnFuncionario;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnCuenta;
+        private System.Windows.Forms.PictureBox pboxMin;
+        private System.Windows.Forms.PictureBox pboxLeave;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnLista;
+        private System.Windows.Forms.Button btnNuevoReclamo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pboxBack;
+        private System.Windows.Forms.DataGridView dgvListado;
+    }
+}

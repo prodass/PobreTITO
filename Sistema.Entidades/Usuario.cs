@@ -5,7 +5,8 @@
         public int idUsuario { get; set; }
         public int idRol { get; set; }
         public string Nombre { get; set; }
-        public string Direccion { get; set; }
+        public int idCalle { get; set; }
+        public string Altura { get; set; }
         public string Telefono { get; set; }
         public string Dni { get; set; }
         public string Email { get; set; }
