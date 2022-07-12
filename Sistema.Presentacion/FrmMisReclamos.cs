@@ -23,7 +23,7 @@ namespace Sistema.Presentacion
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void FrmMenu_MouseDown(object sender, MouseEventArgs e)
+        private void FrmMisReclamos_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -39,7 +39,8 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmMenu frm = new FrmMenu();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -90,12 +91,21 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmCuenta frm = new FrmCuenta();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmFuncionario frm = new FrmFuncionario();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnNuevoReclamo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmNuevoReclamo frm = new FrmNuevoReclamo();
             frm.ShowDialog();
             this.Close();
         }

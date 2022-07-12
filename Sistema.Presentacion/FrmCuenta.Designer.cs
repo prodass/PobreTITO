@@ -62,12 +62,12 @@
             this.cboxCalle = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboxRol = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cboxRol = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogOut)).BeginInit();
@@ -115,7 +115,7 @@
             // 
             this.btnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionario.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFuncionario.Location = new System.Drawing.Point(35, 296);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(132, 29);
@@ -141,7 +141,7 @@
             this.btnCuenta.BackColor = System.Drawing.SystemColors.Window;
             this.btnCuenta.Cursor = System.Windows.Forms.Cursors.No;
             this.btnCuenta.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCuenta.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuenta.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCuenta.ForeColor = System.Drawing.Color.Black;
             this.btnCuenta.Location = new System.Drawing.Point(35, 176);
             this.btnCuenta.Name = "btnCuenta";
@@ -163,9 +163,9 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
-            this.linkLabel1.Location = new System.Drawing.Point(44, 490);
+            this.linkLabel1.Location = new System.Drawing.Point(41, 490);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(108, 16);
             this.linkLabel1.TabIndex = 6;
@@ -177,7 +177,7 @@
             // 
             this.btnLista.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLista.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnLista.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLista.Font = new System.Drawing.Font("Gadugi", 9.75F);
             this.btnLista.Location = new System.Drawing.Point(35, 256);
             this.btnLista.Name = "btnLista";
             this.btnLista.Size = new System.Drawing.Size(132, 29);
@@ -190,7 +190,7 @@
             // 
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Font = new System.Drawing.Font("Gadugi", 9.75F);
             this.btnNuevo.Location = new System.Drawing.Point(35, 216);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(132, 29);
@@ -439,44 +439,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Login: ";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.label12.Location = new System.Drawing.Point(219, 452);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(429, 16);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "(*) Para actualizar los campos simplemente reemplace el texto y pulse actualizar." +
-    "";
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(21, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 1);
-            this.label1.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(510, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 23);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Mi Cuenta";
-            // 
-            // label11
-            // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Location = new System.Drawing.Point(396, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(326, 1);
-            this.label11.TabIndex = 44;
-            // 
             // cboxRol
             // 
             this.cboxRol.DropDownHeight = 206;
@@ -499,6 +461,45 @@
             this.label13.Size = new System.Drawing.Size(29, 16);
             this.label13.TabIndex = 35;
             this.label13.Text = "Rol:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.label12.Location = new System.Drawing.Point(219, 452);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(429, 16);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "(*) Para actualizar los campos simplemente reemplace el texto y pulse actualizar." +
+    "";
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(21, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 1);
+            this.label1.TabIndex = 42;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.label2.Location = new System.Drawing.Point(511, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 22);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Mi cuenta";
+            // 
+            // label11
+            // 
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Location = new System.Drawing.Point(396, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(326, 1);
+            this.label11.TabIndex = 44;
             // 
             // FrmCuenta
             // 

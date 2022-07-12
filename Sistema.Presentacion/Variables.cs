@@ -12,5 +12,6 @@
         public static string Telefono { get; set; }
         public static string Dni { get; set; }
         public static string Email { get; set; }
+        public static int idMotivo { get; set; }
     }
 }

@@ -89,20 +89,23 @@ namespace Sistema.Presentacion
             {
                 string rta = "";
                 bool error = false;
-                if (!Regex.Match(tboxNombre.Text,@"^[A-Za-z]{4,30}$|^[A-Za-z]{4,30}\s[A-Za-z]{4,20}$").Success)
+
+                errorIcono.Clear();
+
+                if (!Regex.Match(tboxNombre.Text, @"^[A-Za-z]+$|^[A-Za-z]+\s[A-Za-z]+$|^[A-Za-z]+\s[A-Za-z]+\s[A-Za-z]+$").Success)
                 {
                     error = true;
                     errorIcono.SetError(tboxNombre, "Ingrese correctamente el nombre de la categoria!");
                 }
-                if (!Regex.Match(tboxTelefono.Text, @"^\d{10}$").Success)
+                if (!Regex.Match(tboxTelefono.Text,@"^\d{10}$").Success)
                 {
                     error = true;
                     errorIcono.SetError(tboxTelefono, "Ingrese correctamente el número telefónico!");
                 }
-                if (cboxRol.SelectedIndex == -1)
+                if (cboxCalle.SelectedIndex == -1)
                 {
                     error = true;
-                    errorIcono.SetError(cboxRol, "Seleccione un rol!");
+                    errorIcono.SetError(cboxCalle, "Seleccione una calle!");
                 }
                 if (tboxAltura.Text == string.Empty)
                 {
@@ -136,7 +139,7 @@ namespace Sistema.Presentacion
                 }
                 else
                 {
-                    rta = NUsuario.Insertar(Convert.ToInt32(cboxRol.SelectedValue), tboxNombre.Text.Trim(), Convert.ToInt32(cboxCalle.SelectedValue), tboxAltura.Text, tboxTelefono.Text.Trim(), tboxDni.Text.Trim(),tboxEmail.Text.Trim(),tboxClave.Text.Trim()); ;
+                    rta = NUsuario.Insertar(Convert.ToInt32(cboxRol.SelectedValue), tboxNombre.Text.Trim(), Convert.ToInt32(cboxCalle.SelectedValue), tboxAltura.Text, tboxTelefono.Text.Trim(), tboxDni.Text.Trim(),tboxEmail.Text.Trim(),tboxClave.Text.Trim());
                     if (rta.Equals("OK"))
                     {
                         this.MensajeOk("La nueva categoria se insertó correctamente!");
@@ -167,6 +170,11 @@ namespace Sistema.Presentacion
             this.Hide();
             FrmMenu frm = new FrmMenu();
             frm.Show();
+        }
+
+        private void btnNUsuarios_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

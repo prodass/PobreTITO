@@ -58,7 +58,8 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmNewUser frm = new FrmNewUser();
-            frm.Show();
+            frm.ShowDialog();
+            frm.Close();
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -169,6 +170,9 @@ namespace Sistema.Presentacion
             lblRol.Text = Variables.Rol;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

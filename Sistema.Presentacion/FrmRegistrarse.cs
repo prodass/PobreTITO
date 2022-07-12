@@ -127,21 +127,6 @@ namespace Sistema.Presentacion
                     error = true;
                     errorIcono.SetError(tboxNombre, "Ingrese correctamente el nombre de la categoria!");
                 }
-                if (!Regex.Match(tboxTelefono.Text, @"^\d{10}$").Success)
-                {
-                    error = true;
-                    errorIcono.SetError(tboxTelefono, "Ingrese correctamente el número telefónico!");
-                }
-                if (cboxCalle.SelectedIndex == -1)
-                {
-                    error = true;
-                    errorIcono.SetError(cboxCalle, "Seleccione una calle correcta!");
-                }
-                if (!Regex.Match(tboxTelefono.Text, @"^\d+$").Success)
-                {
-                    error = true;
-                    errorIcono.SetError(tboxAltura, "Ingrese correctamente la altura!");
-                }
                 if (!Regex.Match(tboxDni.Text, @"^\d{8}$").Success)
                 {
                     error = true;

@@ -21,6 +21,7 @@ namespace Sistema.Datos
             SqlConnection Cadena = new SqlConnection();
             try
             {
+                //Cadena.ConnectionString = "Server = DESKTOP-J3CPUAT; Database = PobreTITOr; User Id = Admin; Password = 1234"; REMOTO
                 Cadena.ConnectionString = "Data Source=INSPIRON3583\\PABLOSQL;Initial Catalog=PobreTITO;Integrated Security=True";
             }
             catch (Exception ex)

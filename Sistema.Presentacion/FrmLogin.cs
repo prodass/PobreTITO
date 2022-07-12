@@ -92,7 +92,8 @@ namespace Sistema.Presentacion
         {
             FrmRegistrarse frm = new FrmRegistrarse(this.Location);
             this.Hide();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
 
         //Login
@@ -111,8 +112,6 @@ namespace Sistema.Presentacion
                 }
                 else
                 {
-                    MessageBox.Show("Bienvenido al sistema!", "Login - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmMenu frm = new FrmMenu();
                     Variables.idUsuario = Convert.ToInt32(tabla.Rows[0][0]);
                     Variables.idRol = Convert.ToInt32(tabla.Rows[0][1]);
                     Variables.Rol = Convert.ToString(tabla.Rows[0][2]);
@@ -123,9 +122,11 @@ namespace Sistema.Presentacion
                     Variables.Telefono = Convert.ToString(tabla.Rows[0][7]);
                     Variables.Dni = Convert.ToString(tabla.Rows[0][8]);
                     Variables.Email = Convert.ToString(tabla.Rows[0][9]);
+                    MessageBox.Show($"Bienvenido al sistema: {Variables.Nombre}!", "Login - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmMenu frm = new FrmMenu();
                     this.Hide();
-                    frm.Show();
-                    //this.Close();
+                    frm.ShowDialog();
+                    this.Close();
                 }
 
             }

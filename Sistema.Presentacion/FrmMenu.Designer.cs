@@ -216,6 +216,7 @@
             this.btnNuevoReclamo.TabIndex = 2;
             this.btnNuevoReclamo.Text = "Nuevo reclamo";
             this.btnNuevoReclamo.UseVisualStyleBackColor = true;
+            this.btnNuevoReclamo.Click += new System.EventHandler(this.btnNuevoReclamo_Click);
             // 
             // pictureBox3
             // 

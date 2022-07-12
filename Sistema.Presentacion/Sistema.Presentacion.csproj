@@ -82,15 +82,28 @@
     <Compile Include="FrmNewUser.Designer.cs">
       <DependentUpon>FrmNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNuevoReclamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoReclamo.Designer.cs">
+      <DependentUpon>FrmNuevoReclamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistrarse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRegistrarse.Designer.cs">
       <DependentUpon>FrmRegistrarse.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResumen.Designer.cs">
+      <DependentUpon>FrmResumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variables.cs" />
+    <Compile Include="VReclamo.cs" />
     <EmbeddedResource Include="FrmCuenta.resx">
       <DependentUpon>FrmCuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,8 +122,14 @@
     <EmbeddedResource Include="FrmNewUser.resx">
       <DependentUpon>FrmNewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoReclamo.resx">
+      <DependentUpon>FrmNuevoReclamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarse.resx">
       <DependentUpon>FrmRegistrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResumen.resx">
+      <DependentUpon>FrmResumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

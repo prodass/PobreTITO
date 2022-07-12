@@ -68,7 +68,8 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmMenu frm = new FrmMenu();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
         private void pboxLeave_Click(object sender, EventArgs e)
         {
@@ -109,19 +110,24 @@ namespace Sistema.Presentacion
         }
         private void btnLista_Click(object sender, EventArgs e)
         {
-            FrmMisReclamos frm = new FrmMisReclamos();
-            frm.Show();
             this.Hide();
+            FrmMisReclamos frm = new FrmMisReclamos();
+            frm.ShowDialog();
+            this.Close();
         }
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
-            FrmFuncionario frm = new FrmFuncionario();
-            frm.Show();
             this.Hide();
+            FrmFuncionario frm = new FrmFuncionario();
+            frm.ShowDialog();
+            this.Close();
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FrmNuevoReclamo frm = new FrmNuevoReclamo();
+            frm.ShowDialog();
+            this.Close();
         }
         private void pboxLogOut_Click(object sender, EventArgs e)
         {

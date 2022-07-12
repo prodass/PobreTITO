@@ -115,7 +115,8 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmCuenta frm = new FrmCuenta();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
@@ -126,9 +127,18 @@ namespace Sistema.Presentacion
         }
         private void btnLista_Click(object sender, EventArgs e)
         {
-            FrmMisReclamos frm = new FrmMisReclamos();
-            frm.Show();
             this.Hide();
+            FrmMisReclamos frm = new FrmMisReclamos();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnNuevoReclamo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmNuevoReclamo frm = new FrmNuevoReclamo();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

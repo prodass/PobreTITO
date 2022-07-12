@@ -221,6 +221,7 @@
             this.btnNuevoReclamo.TabIndex = 2;
             this.btnNuevoReclamo.Text = "Nuevo reclamo";
             this.btnNuevoReclamo.UseVisualStyleBackColor = true;
+            this.btnNuevoReclamo.Click += new System.EventHandler(this.btnNuevoReclamo_Click);
             // 
             // panel1
             // 
@@ -242,6 +243,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 515);
             this.panel1.TabIndex = 23;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // pboxBack
             // 
@@ -283,6 +285,7 @@
             this.Name = "FrmMisReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMisReclamos";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmMisReclamos_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).EndInit();
