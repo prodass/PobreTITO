@@ -305,7 +305,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMenu";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmMenu_MouseDown);
             this.panel1.ResumeLayout(false);

@@ -290,7 +290,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.label2.Location = new System.Drawing.Point(462, 53);
+            this.label2.Location = new System.Drawing.Point(437, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 22);
             this.label2.TabIndex = 52;
@@ -439,6 +439,7 @@
             this.cboxIncidente.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboxIncidente.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxIncidente.FormattingEnabled = true;
+            this.cboxIncidente.IntegralHeight = false;
             this.cboxIncidente.Location = new System.Drawing.Point(429, 136);
             this.cboxIncidente.Name = "cboxIncidente";
             this.cboxIncidente.Size = new System.Drawing.Size(233, 24);
@@ -490,7 +491,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoReclamo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNuevoReclamo";
+            this.Text = "Nuevo reclamo";
             this.Load += new System.EventHandler(this.FrmNuevoReclamo_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmNuevoReclamo_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBack)).EndInit();

@@ -14,9 +14,8 @@ namespace Sistema.Presentacion
 {
     public partial class FrmResumen : Form
     {
-        int numero = 0;
+        int numero;
         DateTime fecha = DateTime.Now;
-        public static bool estado = false;
 
         public FrmResumen()
         {
@@ -40,11 +39,11 @@ namespace Sistema.Presentacion
         }
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Nuevo reclamo - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mensaje, "Resumen - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void MensajeOk(string mensaje)
         {
-            MessageBox.Show(mensaje, "Nuevo reclamo - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Resumen - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Botones
@@ -52,13 +51,13 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmMenu frm = new FrmMenu();
-            frm.ShowDialog();
             frm.Close();
+            frm.ShowDialog();
         }
 
         private void FrmResumen_Load(object sender, EventArgs e)
         {
-            string Fecha = fecha.ToString("dd/MM/yyyy - hh:mm");
+            string Fecha = fecha.ToString("dd/MM/yyyy - HH:mm");
 
             lblNro.Text = numero.ToString();
             lblHora.Text = Fecha;
@@ -67,8 +66,8 @@ namespace Sistema.Presentacion
             lblCalle.Text = VReclamo.calle;
             lblAltura.Text = VReclamo.altura;
             lblDescripción.Text = VReclamo.descripcion;
-            VReclamo.fecha = Fecha; 
-
+            VReclamo.fecha = Fecha;
+            if (pictureBox1.Image == null) lblFoto.Visible = true; else lblFoto.Visible = false;
             numero++;
         }
 
@@ -78,28 +77,33 @@ namespace Sistema.Presentacion
             Opcion = MessageBox.Show("Está seguro que desea cancelar el reclamo?", "Nuevo reclamo - PobreTITO", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if (Opcion == DialogResult.OK)
             {
+                this.Hide();
+                FrmNuevoReclamo frm = new FrmNuevoReclamo();
                 this.Close();
+                frm.ShowDialog();
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string rta = "";
-            estado = true;
             DialogResult Opcion;
             Opcion = MessageBox.Show("Está seguro que los datos estan correctos?","Resumen - PobreTITO",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
             if(Opcion == DialogResult.OK)
             {
                 rta = NReclamo.Insertar(Variables.idUsuario,VReclamo.idIncidente,VReclamo.idMotivo,VReclamo.idCalle,VReclamo.altura,"En revisión",VReclamo.descripcion,VReclamo.foto,VReclamo.fecha);
-                this.Close();
                 if (rta.Equals("OK"))
                 {
-                    this.MensajeOk("La nueva categoria se insertó correctamente!");
+                    this.MensajeOk("El nuevo reclamo se ingresó correctamente!");
                 }
                 else
                 {
                     this.MensajeError(rta);
                 }
+                this.Hide();
+                FrmNuevoReclamo frm = new FrmNuevoReclamo();
+                this.Close();
+                frm.ShowDialog();
             }
         }
     }

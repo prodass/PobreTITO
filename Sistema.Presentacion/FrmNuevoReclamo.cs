@@ -27,16 +27,7 @@ namespace Sistema.Presentacion
 
             this.CargaMotivos();
             this.CargaCalles();
-
-            if (FrmResumen.estado)
-            {
-                cboxMotivo.SelectedIndex = -1;
-                cboxIncidente.SelectedIndex = -1;
-                cboxCalle.SelectedIndex = -1;
-                tboxAltura.Clear();
-                tboxFoto.Clear();
-                tboxDescripcion.Clear();
-            }
+            this.Limpiar();
         }
 
         //Funcion para mover la ventana
@@ -66,7 +57,7 @@ namespace Sistema.Presentacion
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             DialogResult Opcion;
-            Opcion = MessageBox.Show("Esta seguro que desea cerrar sesión?", "Menu - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Opcion = MessageBox.Show("Esta seguro que desea cerrar sesión?", "Nuevo reclamo - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Opcion == DialogResult.Yes)
             {
                 this.Hide();
@@ -82,7 +73,7 @@ namespace Sistema.Presentacion
         private void pboxLeave_Click(object sender, EventArgs e)
         {
             DialogResult Opcion;
-            Opcion = MessageBox.Show("Esta seguro que desea salir?", "Menu - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Opcion = MessageBox.Show("Esta seguro que desea salir?", "Nuevo reclamo - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Opcion == DialogResult.Yes)
             {
                 Application.Exit();
@@ -127,14 +118,60 @@ namespace Sistema.Presentacion
             this.Close();
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            errorIcono.Clear();
+            bool error = false;
+            if (cboxMotivo.SelectedIndex == -1)
+            {
+                error = true;
+                errorIcono.SetError(cboxMotivo, "Seleccione correctamente el motivo!");
+            }
+            if (cboxIncidente.SelectedIndex == -1)
+            {
+                error = true;
+                errorIcono.SetError(cboxIncidente, "Seleccione correctamente el incidente!");
+            }
+            if (cboxCalle.SelectedIndex == -1)
+            {
+                error = true;
+                errorIcono.SetError(cboxCalle, "Seleccione correctamente la calle!");
+            }
+            if (!Regex.Match(tboxAltura.Text, @"^\d+$").Success)
+            {
+                error = true;
+                errorIcono.SetError(tboxAltura, "Ingrese correctamente la altura!");
+            }
+            if (error)
+            {
+                MessageBox.Show("Se detectaron errores, serán remarcados!", "Nuevo reclamo - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                VReclamo.idIncidente = Convert.ToInt32(cboxIncidente.SelectedValue);
+                VReclamo.idMotivo = Convert.ToInt32(cboxMotivo.SelectedValue);
+                VReclamo.idCalle = Convert.ToInt32(cboxCalle.SelectedValue);
+                VReclamo.motivo = cboxMotivo.Text.Trim();
+                VReclamo.incidente = cboxIncidente.Text.Trim();
+                VReclamo.calle = cboxCalle.Text.Trim();
+                VReclamo.altura = tboxAltura.Text.Trim();
+                VReclamo.foto = tboxFoto.Text.Trim();
+                VReclamo.descripcion = tboxDescripcion.Text.Trim();
+                this.Hide();
+                FrmResumen frm = new FrmResumen();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
         //Cargas
         private void CargaMotivos()
         {
             try
             {
                 cboxMotivo.DataSource = NReclamo.ListarMotivos();
-                cboxMotivo.ValueMember = "idCategoria";
                 cboxMotivo.DisplayMember = "nombre";
+                cboxMotivo.ValueMember = "idCategoria";
                 cboxMotivo.SelectedIndex = -1;
             }
             catch (Exception ex)
@@ -171,49 +208,15 @@ namespace Sistema.Presentacion
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        //Limpiar
+        public void Limpiar()
         {
-            errorIcono.Clear();
-            bool error = false;
-            if (cboxMotivo.SelectedIndex == -1)
-            {
-                error = true;
-                errorIcono.SetError(cboxMotivo, "Seleccione correctamente el motivo!");
-            }
-            if (cboxIncidente.SelectedIndex == -1)
-            {
-                error = true;
-                errorIcono.SetError(cboxIncidente, "Seleccione correctamente el incidente!");
-            }
-            if (cboxCalle.SelectedIndex == -1)
-            {
-                error = true;
-                errorIcono.SetError(cboxCalle, "Seleccione correctamente la calle!");
-            }
-            if (!Regex.Match(tboxAltura.Text,@"^\d+$").Success)
-            {
-                error = true;
-                errorIcono.SetError(tboxAltura, "Ingrese correctamente la altura!");
-            }
-            if (error)
-            {
-                MessageBox.Show("Se detectaron errores, serán remarcados!", "Nuevo reclamo - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                VReclamo.idIncidente = Convert.ToInt32(cboxIncidente.SelectedValue);
-                VReclamo.idMotivo = Convert.ToInt32(cboxMotivo.SelectedValue);
-                VReclamo.idCalle = Convert.ToInt32(cboxCalle.SelectedValue);
-                VReclamo.motivo = cboxMotivo.Text.Trim();
-                VReclamo.incidente = cboxIncidente.Text.Trim();
-                VReclamo.calle = cboxCalle.Text.Trim();
-                VReclamo.altura = tboxAltura.Text.Trim();
-                VReclamo.foto = tboxFoto.Text.Trim();
-                VReclamo.descripcion = tboxDescripcion.Text.Trim();
-                FrmResumen frm = new FrmResumen();
-                frm.ShowDialog();
-            }
+            cboxMotivo.SelectedValue = -1;
+            cboxIncidente.SelectedValue = -1;
+            cboxCalle.SelectedValue = -1;
+            tboxAltura.Clear();
+            tboxFoto.Clear();
+            tboxDescripcion.Clear();
         }
-            
     }
 }

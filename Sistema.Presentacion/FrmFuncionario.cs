@@ -23,7 +23,8 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmMenu frm = new FrmMenu();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
         private void pboxLeave_Click(object sender, EventArgs e)
         {
@@ -123,14 +124,24 @@ namespace Sistema.Presentacion
                 dgvReclamo.DataSource = NReclamo.Listar();
 
                 //Formato
-                dgvReclamo.Columns[0].Width = 30;
-                dgvReclamo.Columns[1].Width = 100;
-                dgvReclamo.Columns[2].Width = 100;
-                dgvReclamo.Columns[3].Width = 90;
-                dgvReclamo.Columns[4].Width = 90;
-                dgvReclamo.Columns[7].Width = 103;
-
+                dgvReclamo.Columns[0].Width = 25;
+                dgvReclamo.Columns[1].Width = 215;
+                dgvReclamo.Columns[2].Width = 123;
+                dgvReclamo.Columns[4].Width = 65;
+                dgvReclamo.Columns[5].Width = 50;
+                dgvReclamo.Columns[6].Width = 105;
+                dgvReclamo.Columns[7].Width = 140;
+                dgvReclamo.Columns[8].Width = 40;
+                dgvReclamo.Columns[10].Width = 140;
+                   
                 dgvReclamo.Columns[0].HeaderText = "ID";
+                dgvReclamo.Columns[2].HeaderText = "Categoría";
+                dgvReclamo.Columns[7].HeaderText = "Calle";
+                   
+                dgvReclamo.Columns[3].Visible = false;
+                dgvReclamo.Columns[9].Visible = false;
+                   
+                dgvReclamo.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
                 lblTotalR.Text = $"Total registros: {(dgvReclamo.Rows.Count).ToString()}";
             }

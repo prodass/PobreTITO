@@ -195,7 +195,7 @@
             // tboxNombre
             // 
             this.tboxNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxNombre.Location = new System.Drawing.Point(97, 25);
+            this.tboxNombre.Location = new System.Drawing.Point(97, 22);
             this.tboxNombre.Name = "tboxNombre";
             this.tboxNombre.Size = new System.Drawing.Size(224, 23);
             this.tboxNombre.TabIndex = 1;
@@ -367,10 +367,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(490, 14);
+            this.label3.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.label3.Location = new System.Drawing.Point(497, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 26);
+            this.label3.Size = new System.Drawing.Size(114, 25);
             this.label3.TabIndex = 66;
             this.label3.Text = "Registrarse";
             // 
@@ -423,7 +424,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRegistrarse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "FrmRegistrarse";
+            this.Text = "Registro";
             this.Load += new System.EventHandler(this.FrmRegistrarse_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmRegistrarse_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();

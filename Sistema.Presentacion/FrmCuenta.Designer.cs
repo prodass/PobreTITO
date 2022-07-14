@@ -68,6 +68,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogOut)).BeginInit();
@@ -265,7 +266,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 64);
+            this.label4.Location = new System.Drawing.Point(8, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 25;
@@ -275,7 +276,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 170);
+            this.label5.Location = new System.Drawing.Point(8, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 27;
@@ -285,11 +286,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 135);
+            this.label6.Location = new System.Drawing.Point(8, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
+            this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Altura (*):";
+            this.label6.Text = "Altura:";
             // 
             // label7
             // 
@@ -322,7 +323,7 @@
             // tboxTelefono
             // 
             this.tboxTelefono.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxTelefono.Location = new System.Drawing.Point(90, 61);
+            this.tboxTelefono.Location = new System.Drawing.Point(90, 96);
             this.tboxTelefono.Name = "tboxTelefono";
             this.tboxTelefono.Size = new System.Drawing.Size(210, 23);
             this.tboxTelefono.TabIndex = 31;
@@ -330,7 +331,7 @@
             // tboxAltura
             // 
             this.tboxAltura.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxAltura.Location = new System.Drawing.Point(90, 132);
+            this.tboxAltura.Location = new System.Drawing.Point(90, 164);
             this.tboxAltura.Name = "tboxAltura";
             this.tboxAltura.Size = new System.Drawing.Size(210, 23);
             this.tboxAltura.TabIndex = 32;
@@ -338,7 +339,7 @@
             // tboxDni
             // 
             this.tboxDni.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxDni.Location = new System.Drawing.Point(313, 265);
+            this.tboxDni.Location = new System.Drawing.Point(90, 62);
             this.tboxDni.Name = "tboxDni";
             this.tboxDni.Size = new System.Drawing.Size(210, 23);
             this.tboxDni.TabIndex = 33;
@@ -386,14 +387,15 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.tboxDni);
             this.groupBox1.Controls.Add(this.cboxCalle);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.tboxNombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tboxTelefono);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tboxAltura);
             this.groupBox1.Location = new System.Drawing.Point(223, 98);
             this.groupBox1.Name = "groupBox1";
@@ -405,10 +407,11 @@
             // cboxCalle
             // 
             this.cboxCalle.DropDownHeight = 206;
+            this.cboxCalle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCalle.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCalle.FormattingEnabled = true;
             this.cboxCalle.IntegralHeight = false;
-            this.cboxCalle.Location = new System.Drawing.Point(90, 95);
+            this.cboxCalle.Location = new System.Drawing.Point(90, 129);
             this.cboxCalle.Name = "cboxCalle";
             this.cboxCalle.Size = new System.Drawing.Size(210, 24);
             this.cboxCalle.TabIndex = 34;
@@ -417,11 +420,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 98);
+            this.label10.Location = new System.Drawing.Point(8, 132);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 16);
+            this.label10.Size = new System.Drawing.Size(38, 16);
             this.label10.TabIndex = 33;
-            this.label10.Text = "Calle (*):";
+            this.label10.Text = "Calle:";
             // 
             // groupBox2
             // 
@@ -469,10 +472,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.label12.Location = new System.Drawing.Point(219, 452);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(429, 16);
+            this.label12.Size = new System.Drawing.Size(413, 16);
             this.label12.TabIndex = 41;
-            this.label12.Text = "(*) Para actualizar los campos simplemente reemplace el texto y pulse actualizar." +
-    "";
+            this.label12.Text = "Para actualizar los campos simplemente reemplace el texto y pulse actualizar.";
             // 
             // label1
             // 
@@ -501,19 +503,30 @@
             this.label11.Size = new System.Drawing.Size(326, 1);
             this.label11.TabIndex = 44;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.label14.Location = new System.Drawing.Point(219, 472);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(126, 16);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "(*) Campo obligatorio.";
+            // 
             // FrmCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(220)))));
             this.ClientSize = new System.Drawing.Size(910, 515);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.tboxDni);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pboxMin);
             this.Controls.Add(this.pboxLeave);
@@ -524,7 +537,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCuenta";
+            this.Text = "Mi cuenta";
             this.Load += new System.EventHandler(this.FrmCuenta_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmCuenta_MouseDown);
             this.panel1.ResumeLayout(false);
@@ -586,5 +599,6 @@
         private System.Windows.Forms.PictureBox pboxFuncionario;
         private System.Windows.Forms.ComboBox cboxRol;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

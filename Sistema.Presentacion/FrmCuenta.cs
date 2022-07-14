@@ -206,11 +206,6 @@ namespace Sistema.Presentacion
                     error = true;
                     errorIcono.SetError(tboxTelefono, "Ingrese correctamente el número telefónico!");
                 }
-                if (tboxAltura.Text == string.Empty)
-                {
-                    error = true;
-                    errorIcono.SetError(tboxAltura, "Ingrese correctamente la dirección!");
-                }
                 if (!Regex.Match(tboxDni.Text, @"^\d{8}$").Success)
                 {
                     error = true;

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pboxFuncionario = new System.Windows.Forms.PictureBox();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.lblTotalRol = new System.Windows.Forms.Label();
             this.dgvRol = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -100,6 +100,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 515);
             this.panel1.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(27, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 1);
+            this.label3.TabIndex = 45;
             // 
             // pboxFuncionario
             // 
@@ -345,10 +353,10 @@
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.dgvReclamo);
             this.tabPage2.Controls.Add(this.lblTotalR);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(728, 351);
+            this.tabPage2.Size = new System.Drawing.Size(728, 350);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reclamos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -409,10 +417,10 @@
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.Controls.Add(this.lblTotalRol);
             this.tabPage3.Controls.Add(this.dgvRol);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(728, 351);
+            this.tabPage3.Size = new System.Drawing.Size(728, 350);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Roles";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -458,14 +466,6 @@
             this.panel2.Size = new System.Drawing.Size(743, 387);
             this.panel2.TabIndex = 42;
             // 
-            // label3
-            // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(27, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 1);
-            this.label3.TabIndex = 45;
-            // 
             // FrmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,7 +480,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmFuncionario";
+            this.Text = "Funcionario";
             this.Load += new System.EventHandler(this.FrmFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

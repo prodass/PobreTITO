@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,11 @@ namespace Sistema.Presentacion
         public FrmMisReclamos()
         {
             InitializeComponent();
+        }
+
+        private void FrmMisReclamos_Load(object sender, EventArgs e)
+        {
+            this.Reclamos();
         }
 
         //Funcion para mover la ventana
@@ -45,7 +51,7 @@ namespace Sistema.Presentacion
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             DialogResult Opcion;
-            Opcion = MessageBox.Show("Esta seguro que desea cerrar sesión?", "Menu - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Opcion = MessageBox.Show("Esta seguro que desea cerrar sesión?", "Mis reclamos - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Opcion == DialogResult.Yes)
             {
                 this.Hide();
@@ -61,7 +67,7 @@ namespace Sistema.Presentacion
         private void pboxLeave_Click(object sender, EventArgs e)
         {
             DialogResult Opcion;
-            Opcion = MessageBox.Show("Esta seguro que desea salir?", "Menu - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Opcion = MessageBox.Show("Esta seguro que desea salir?", "Mis reclamos - PobreTITO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Opcion == DialogResult.Yes)
             {
                 Application.Exit();
@@ -69,7 +75,7 @@ namespace Sistema.Presentacion
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Desarrollado por: Pablo Rodas", "Menu - PobreTITO", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Desarrollado por: Pablo Rodas", "Mis reclamos - PobreTITO", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
         }
         private void pboxLeave_MouseEnter(object sender, EventArgs e)
         {
@@ -101,7 +107,6 @@ namespace Sistema.Presentacion
             frm.ShowDialog();
             this.Close();
         }
-
         private void btnNuevoReclamo_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -109,5 +114,42 @@ namespace Sistema.Presentacion
             frm.ShowDialog();
             this.Close();
         }
+
+        //Carga
+        private void Reclamos()
+        {
+            try
+            {
+                dgvListado.DataSource = NReclamo.Listar();
+
+                //Formato
+                dgvListado.Columns[0].Width = 25;
+                dgvListado.Columns[1].Width = 215;
+                dgvListado.Columns[2].Width = 123;
+                dgvListado.Columns[4].Width = 65;
+                dgvListado.Columns[5].Width = 50;
+                dgvListado.Columns[6].Width = 105;
+                dgvListado.Columns[7].Width = 140;
+                dgvListado.Columns[8].Width = 40;
+                dgvListado.Columns[10].Width = 140;
+
+                dgvListado.Columns[0].HeaderText = "ID";
+                dgvListado.Columns[2].HeaderText = "Categoría";
+                dgvListado.Columns[7].HeaderText = "Calle";
+
+                dgvListado.Columns[3].Visible = false;
+                dgvListado.Columns[9].Visible = false;
+
+                dgvListado.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                lblTotalR.Text = $"Total de registros: {(dgvListado.Rows.Count).ToString()}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        
     }
 }

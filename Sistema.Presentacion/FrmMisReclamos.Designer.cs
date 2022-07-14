@@ -46,6 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pboxBack = new System.Windows.Forms.PictureBox();
             this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.lblTotalR = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).BeginInit();
@@ -266,8 +267,20 @@
             this.dgvListado.Location = new System.Drawing.Point(206, 49);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
+            this.dgvListado.RowHeadersVisible = false;
+            this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListado.Size = new System.Drawing.Size(692, 381);
             this.dgvListado.TabIndex = 24;
+            // 
+            // lblTotalR
+            // 
+            this.lblTotalR.AutoSize = true;
+            this.lblTotalR.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalR.Location = new System.Drawing.Point(206, 433);
+            this.lblTotalR.Name = "lblTotalR";
+            this.lblTotalR.Size = new System.Drawing.Size(106, 16);
+            this.lblTotalR.TabIndex = 25;
+            this.lblTotalR.Text = "Total registros: 0";
             // 
             // FrmMisReclamos
             // 
@@ -275,6 +288,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(220)))));
             this.ClientSize = new System.Drawing.Size(910, 515);
+            this.Controls.Add(this.lblTotalR);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.pboxMin);
             this.Controls.Add(this.pboxLeave);
@@ -284,7 +298,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMisReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMisReclamos";
+            this.Text = "Mis reclamos";
+            this.Load += new System.EventHandler(this.FrmMisReclamos_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmMisReclamos_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).EndInit();
@@ -296,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -318,5 +334,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pboxBack;
         private System.Windows.Forms.DataGridView dgvListado;
+        private System.Windows.Forms.Label lblTotalR;
     }
 }

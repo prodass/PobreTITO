@@ -106,7 +106,8 @@ namespace Sistema.Presentacion
         {
             this.Hide();
             FrmLogin frm = new FrmLogin();
-            frm.Show();
+            frm.ShowDialog();
+            this.Close();
         }
         private void MensajeError(string mensaje)
         {
@@ -122,10 +123,16 @@ namespace Sistema.Presentacion
             {
                 string rta = "";
                 bool error = false;
+                errorIcono.Clear();
                 if (!Regex.Match(tboxNombre.Text, @"^[A-Za-z]{4,30}$|^[A-Za-z]{4,30}\s[A-Za-z]{4,20}$").Success)
                 {
                     error = true;
                     errorIcono.SetError(tboxNombre, "Ingrese correctamente el nombre de la categoria!");
+                }
+                if (!Regex.Match(tboxTelefono.Text, @"^\d{10}$").Success)
+                {
+                    error = true;
+                    errorIcono.SetError(tboxTelefono, "Ingrese correctamente el numero de telefono!");
                 }
                 if (!Regex.Match(tboxDni.Text, @"^\d{8}$").Success)
                 {
@@ -163,7 +170,8 @@ namespace Sistema.Presentacion
                         cboxRol.SelectedIndex = -1;
                         FrmLogin frm = new FrmLogin();
                         this.Hide();
-                        frm.Show();
+                        frm.ShowDialog();
+                        this.Close();
                     }
                     else
                     {

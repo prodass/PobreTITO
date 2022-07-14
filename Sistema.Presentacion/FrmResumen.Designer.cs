@@ -59,6 +59,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblFoto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -374,12 +375,24 @@
             this.pictureBox1.TabIndex = 99;
             this.pictureBox1.TabStop = false;
             // 
+            // lblFoto
+            // 
+            this.lblFoto.AutoSize = true;
+            this.lblFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(188)))), ((int)(((byte)(218)))));
+            this.lblFoto.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoto.Location = new System.Drawing.Point(645, 189);
+            this.lblFoto.Name = "lblFoto";
+            this.lblFoto.Size = new System.Drawing.Size(52, 16);
+            this.lblFoto.TabIndex = 100;
+            this.lblFoto.Text = "Sin foto";
+            // 
             // FrmResumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(188)))), ((int)(((byte)(218)))));
             this.ClientSize = new System.Drawing.Size(785, 362);
+            this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNro);
             this.Controls.Add(this.label3);
@@ -408,7 +421,7 @@
             this.Name = "FrmResumen";
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmResumen";
+            this.Text = "Resumen del reclamo";
             this.Load += new System.EventHandler(this.FrmResumen_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmResumen_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -452,5 +465,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFoto;
     }
 }

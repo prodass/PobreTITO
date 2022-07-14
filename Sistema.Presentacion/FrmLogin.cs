@@ -122,7 +122,7 @@ namespace Sistema.Presentacion
                     Variables.Telefono = Convert.ToString(tabla.Rows[0][7]);
                     Variables.Dni = Convert.ToString(tabla.Rows[0][8]);
                     Variables.Email = Convert.ToString(tabla.Rows[0][9]);
-                    MessageBox.Show($"Bienvenido al sistema: {Variables.Nombre}!", "Login - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"{Variables.Nombre}, bienvenido al sistema!", "Login - PobreTITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmMenu frm = new FrmMenu();
                     this.Hide();
                     frm.ShowDialog();

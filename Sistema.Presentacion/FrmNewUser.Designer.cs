@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNewUser));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNReclamos = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnNUsuarios = new System.Windows.Forms.Button();
             this.pboxBack = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,6 @@
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnNReclamos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -98,6 +98,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 390);
             this.panel1.TabIndex = 16;
+            // 
+            // btnNReclamos
+            // 
+            this.btnNReclamos.Enabled = false;
+            this.btnNReclamos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNReclamos.ForeColor = System.Drawing.Color.Silver;
+            this.btnNReclamos.Location = new System.Drawing.Point(34, 182);
+            this.btnNReclamos.Name = "btnNReclamos";
+            this.btnNReclamos.Size = new System.Drawing.Size(132, 29);
+            this.btnNReclamos.TabIndex = 58;
+            this.btnNReclamos.TabStop = false;
+            this.btnNReclamos.Text = "Nose que poner";
+            this.btnNReclamos.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -479,19 +492,6 @@
             this.label12.Size = new System.Drawing.Size(326, 1);
             this.label12.TabIndex = 60;
             // 
-            // btnNReclamos
-            // 
-            this.btnNReclamos.Enabled = false;
-            this.btnNReclamos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNReclamos.ForeColor = System.Drawing.Color.Silver;
-            this.btnNReclamos.Location = new System.Drawing.Point(34, 182);
-            this.btnNReclamos.Name = "btnNReclamos";
-            this.btnNReclamos.Size = new System.Drawing.Size(132, 29);
-            this.btnNReclamos.TabIndex = 58;
-            this.btnNReclamos.TabStop = false;
-            this.btnNReclamos.Text = "Nose que poner";
-            this.btnNReclamos.UseVisualStyleBackColor = true;
-            // 
             // FrmNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,7 +512,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNewUser";
+            this.Text = "Registro";
             this.Load += new System.EventHandler(this.FrmNewUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
