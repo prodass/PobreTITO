@@ -1,3 +1,4 @@
 # Base de datos
 
-La base de datos esta hecha con SQL Server, recordar restaurar el arhivo .bak y cambiar el data source en la cadena de conexion dentro del codigo.
+La base de datos corre bajo SQL Server. (avisarme para iniciar el servidor).
+En caso de querer correrlo local dejo el archivo script.
