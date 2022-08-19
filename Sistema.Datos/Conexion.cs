@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sistema.Datos
 {
@@ -21,8 +17,8 @@ namespace Sistema.Datos
             SqlConnection Cadena = new SqlConnection();
             try
             {
-                //Cadena.ConnectionString = "Server = DESKTOP-J3CPUAT; Database = PobreTITOr; User Id = Admin; Password = 1234"; REMOTO
-                Cadena.ConnectionString = "Data Source=INSPIRON3583\\PABLOSQL;Initial Catalog=PobreTITO;Integrated Security=True";
+                Cadena.ConnectionString = "Server = minubepablo.ddns.net,1433; Database = PobreTITO; User Id = sa; Password = 1234Pablo"; //REMOTO
+                //Cadena.ConnectionString = "Data Source=INSPIRON3583\\PABLOSQL;Initial Catalog=PobreTITO;Integrated Security=True";
             }
             catch (Exception ex)
             {

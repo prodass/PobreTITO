@@ -40,11 +40,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tboxContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnIngresar = new System.Windows.Forms.Button();
             this.linklblOlvido = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnIngresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLeave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).BeginInit();
             this.panel1.SuspendLayout();
@@ -169,22 +169,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Iniciar sesión";
             // 
-            // btnIngresar
-            // 
-            this.btnIngresar.BackColor = System.Drawing.Color.LightGray;
-            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(335, 311);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(327, 35);
-            this.btnIngresar.TabIndex = 3;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            this.btnIngresar.MouseEnter += new System.EventHandler(this.btnIngresar_MouseEnter);
-            // 
             // linklblOlvido
             // 
             this.linklblOlvido.AutoSize = true;
@@ -193,6 +177,7 @@
             this.linklblOlvido.Name = "linklblOlvido";
             this.linklblOlvido.Size = new System.Drawing.Size(142, 16);
             this.linklblOlvido.TabIndex = 5;
+            this.linklblOlvido.TabStop = true;
             this.linklblOlvido.Text = "¿Olvido su contraseña?";
             this.linklblOlvido.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblOlvido_LinkClicked);
             // 
@@ -218,6 +203,17 @@
             this.errorIcono.ContainerControl = this;
             this.errorIcono.Icon = ((System.Drawing.Icon)(resources.GetObject("errorIcono.Icon")));
             // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(414, 271);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(126, 30);
+            this.btnIngresar.TabIndex = 13;
+            this.btnIngresar.Text = "button1";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnIngresar.MouseEnter += new System.EventHandler(this.btnIngresar_MouseEnter);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,10 +221,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(220)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(799, 390);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linklblOlvido);
-            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tboxContraseña);
             this.Controls.Add(this.label2);
@@ -269,11 +265,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tboxContraseña;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.LinkLabel linklblOlvido;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.Button btnIngresar;
     }
 }
